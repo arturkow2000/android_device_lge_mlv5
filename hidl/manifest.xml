@@ -1,0 +1,750 @@
+<!--
+    This is a skeleton device manifest. Notes:
+    1. android.hidl.*, android.frameworks.*, android.system.* are not included.
+    2. If a HAL is supported in both hwbinder and passthrough transport,
+       only hwbinder is shown.
+    3. It is likely that HALs in passthrough transport does not have
+       <interface> declared; users will have to write them by hand.
+    4. A HAL with lower minor version can be overridden by a HAL with
+       higher minor version if they have the same name and major version.
+    5. sepolicy version is set to 0.0. It is recommended that the entry
+       is removed from the manifest file and written by assemble_vintf
+       at build time.
+
+Warning: 'android.hardware.audio.effect' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.audio' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.bluetooth' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.camera.provider' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.drm' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.drm' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.gatekeeper' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.graphics.allocator' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.graphics.composer' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.graphics.mapper' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.health' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.keymaster' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.light' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.memtrack' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.renderscript' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.soundtrigger' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.thermal' doesn't have bitness info, assuming 32+64.
+Warning: 'android.hardware.vibrator' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.accessory.uevent' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.data' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.display.uevent' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.fido' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.ftmitem' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.gnss' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.lgatcmd' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.light' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.sdcardtray' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.sensors' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.sensortest' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.storageinfo' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.usb.uevent' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.vibrator' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.lge.hardware.vss_ims' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.mediatek.hardware.camera.ccap' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.mediatek.hardware.gnss' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.mediatek.hardware.nvram' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.mediatek.hardware.power' doesn't have bitness info, assuming 32+64.
+Warning: 'vendor.mediatek.hardware.pq' doesn't have bitness info, assuming 32+64.-->
+<manifest version="1.0" type="device">
+    <hal format="hidl">
+        <name>android.hardware.audio</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IDevicesFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.audio.effect</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IEffectsFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.bluetooth</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBluetoothHci</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.broadcastradio</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IBroadcastRadioFactory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.camera.provider</name>
+        <transport>hwbinder</transport>
+        <version>2.4</version>
+        <interface>
+            <name>ICameraProvider</name>
+            <instance>internal/0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.cas</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMediaCasService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.configstore</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISurfaceFlingerConfigs</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.drm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ICryptoFactory</name>
+            <instance>default</instance>
+            <instance>widevine</instance>
+        </interface>
+        <interface>
+            <name>IDrmFactory</name>
+            <instance>default</instance>
+            <instance>widevine</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.gatekeeper</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IGatekeeper</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.gnss</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IGnss</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.graphics.allocator</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IAllocator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.graphics.composer</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IComposer</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.graphics.mapper</name>
+        <transport arch="32+64">passthrough</transport>
+        <version>2.0</version>
+        <interface>
+            <name>IMapper</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.health</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IHealth</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.keymaster</name>
+        <transport>hwbinder</transport>
+        <version>3.0</version>
+        <interface>
+            <name>IKeymasterDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.light</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>ILight</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.media.omx</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOmx</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IOmxStore</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.memtrack</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IMemtrack</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.power</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IPower</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.radio</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+        <interface>
+            <name>ISap</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.radio.deprecated</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOemHook</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.renderscript</name>
+        <transport arch="32+64">passthrough</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.sensors</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISensors</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.soundtrigger</name>
+        <transport>hwbinder</transport>
+        <version>2.0</version>
+        <interface>
+            <name>ISoundTriggerHw</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.thermal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IThermal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.usb</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IUsb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.vibrator</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IVibrator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.wifi</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IWifi</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.wifi.supplicant</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISupplicant</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.accessory</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAccessory</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.accessory.uevent</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAccessoryUevent</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.battery</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IBattery</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>ILgeBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.charger</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ICharger</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.configstore</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IConfigStore</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IGlobalConfigs</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IPowerConfigs</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.data</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IData</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.display.brightness</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDisplayBrightness</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.display.general</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDisplayGeneral</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.display.tune</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDisplayTune</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.display.uevent</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDisplayUevent</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.fido</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILgeFido</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.ftmitem</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFtmitem</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.gnss</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILgeGnss</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.lgatcmd</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILgAtCmd</name>
+            <instance>atservice</instance>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.light</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILightEx</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.lpwg</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILpwg</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.platform</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IPlatform</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.powercontrol</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IPowercontrol</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.powerhint.rescontrol</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IResControl</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.radio</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILgeRadio</name>
+            <instance>lge_radio</instance>
+            <instance>lge_radio2</instance>
+            <instance>radio1_wifi</instance>
+            <instance>radio2_wifi</instance>
+        </interface>
+        <interface>
+            <name>ILgeRadioPcfalcon</name>
+            <instance>lge_radio_test</instance>
+        </interface>
+        <interface>
+            <name>ILgeRadioTest</name>
+            <instance>lge_radio_test</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.sdcardtray</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISDCardTray</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.securefuse</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISecureFuse</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.sensors</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISensors</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.sensortest</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISensorTest</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.storageinfo</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IStorageInfo</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.thermal</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IThermal</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.touch</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITouch</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.usb</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILgeUsb</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.usb.uevent</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IUsbUEvent</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.vibrator</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IVibratorEx</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.vss_ims</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IVssIms</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.camera.ccap</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ICCAPControl</name>
+            <instance>internal/0</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.gnss</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IMtkGnss</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.lbs</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILbs</name>
+            <instance>AgpsDebugInterface</instance>
+            <instance>AgpsInterface</instance>
+            <instance>mtk_agps2framework</instance>
+            <instance>mtk_framework2agps</instance>
+            <instance>mtk_lppe_socket_agps</instance>
+            <instance>mtk_lppe_socket_bt</instance>
+            <instance>mtk_lppe_socket_ipaddr</instance>
+            <instance>mtk_lppe_socket_lbs</instance>
+            <instance>mtk_lppe_socket_network</instance>
+            <instance>mtk_lppe_socket_sensor</instance>
+            <instance>mtk_lppe_socket_wlan</instance>
+            <instance>mtk_mnld2nlputils</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.netdagent</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INetdagent</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.nvram</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>INvram</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.power</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IPower</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.pq</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IPictureQuality</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.radio_tc1</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IRadio</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+        <interface>
+            <name>ISap</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.mediatek.hardware.radio_tc1.deprecated</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IOemHook</name>
+            <instance>slot1</instance>
+            <instance>slot2</instance>
+        </interface>
+    </hal>
+    <!--<sepolicy>
+        <version>0.0</version>
+    </sepolicy>-->
+</manifest>
